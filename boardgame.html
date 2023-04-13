@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bored? Board!</title>
+
+    <link rel="stylesheet" type="text/css" href="boardgame.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Bored? Board!</h1>
+    </div>
+
+    <nav class="shadow-lg">
+        <ul>
+            <li>
+                <a href="#genre1">추리</a>
+            </li>
+            <li>
+                <a href="#genre2">전략</a>
+            </li>
+            <li>
+                <a href="#genre3">협력</a>
+            </li>
+            <li>
+                <a href="#genre4">스피드</a>
+            </li>
+            <li class="login">
+                <button id="open_modal2">Log in</button>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="modal2 hidden2">
+        <div class="modal_overlay2"></div>
+        <div class="modal_content2">
+            <div>
+                <div>
+                    <label>User ID</label>
+                    <input type="text" class="form-control" placeholder="Enter user id or email">
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Enter password">
+                </div>
+                <br>
+                <button id="signin_button">Sign in</button>
+                <button id="open_modal4">Sign up</button>
+                <button class="close_button2">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal3 hidden3">
+        <div class="modal_overlay3"></div>
+        <div class="modal_content3">
+            <div>
+                <table class="table align-middle" border="1">
+                    <thead>
+                        <tr class="table-dark">
+                            <th scope="col">ID</th>
+                            <th scope="col">Rating</th>
+                            <th scope="col">Comment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">dongjin</th>
+                            <td>2.5</td>
+                            <td>funny!</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">dongjin</th>
+                            <td>2.5</td>
+                            <td>funny!</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">dongjin</th>
+                            <td>2.5</td>
+                            <td>funny!</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">dongjin</th>
+                            <td>2.5</td>
+                            <td>funny!</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <label>Rating</label>
+                    <input type="text" class="form-control" placeholder="Put your rating...(ex: 4.5)">
+                </div>
+                <div>
+                    <label>Comment</label>
+                    <input type="text" class="form-control" placeholder="Write the comment...">
+                </div>
+                <button class="mt-2 mb-2">Upload</button>
+                <button class="close_button3 mt-2 mb-2">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal4 hidden4">
+        <div class="modal_overlay4"></div>
+        <div class="modal_content4">
+            <div>
+                <div>
+                    <h2>Sign up</h2>
+                </div>
+                <hr class="mb-4">
+                <div>
+                    <label>User ID</label>
+                    <input type="text" class="form-control" placeholder="Enter user ID" id="input_id">
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Enter user password" id="input_password">
+                </div>
+                <div>
+                    <label>Password Check</label>
+                    <input type="password" class="form-control" placeholder="Enter user password"
+                        id="input_passwordCheck">
+                </div>
+                <div>
+                    <label>User Name</label>
+                    <input type="text" class="form-control" placeholder="Enter user Name" id="input_name">
+                </div>
+                <div>
+                    <label>User Email</label>
+                    <input type="text" class="form-control" placeholder="Enter Email">
+                </div>
+                <div>
+                    <label>User Phone number</label>
+                    <input type="text" class="form-control" placeholder="Enter user Phone number"
+                        id="input_phoneNumber">
+                </div>
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Male
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Female
+                    </label>
+                </div>
+                <br>
+                <button id="signup_button" class="mb-3">Sign up</button>
+                <button class="close_button4" class="mb-3">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal5 hidden5">
+        <div class="modal_overlay5"></div>
+        <div class="modal_content5">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Z1sTLkHgqCI"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <button class="close_button5 mt-2 mb-2">Exit</button>
+        </div>
+    </div>
+    </div>
+
+    <div class="contents">
+        <table class="table align-middle shadow-lg" border="1">
+            <tbody>
+                <tr id="genre1">
+                    <td colspan="5">
+                        <h6>추리</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" width="300px"><img src="img/다빈치코드.jpg" width="200" height="100"></th>
+                    <td width="190px">다빈치 코드</td>
+                    <td width="200px"><img src="img/star.jpeg">&nbsp;&nbsp;4.5</td>
+                    <td width="200px"><button class="button open_modal5" id="openWayModal">
+                            게임방법
+                        </button></td>
+                    <td width="190px"><button class="button" id="open_modal3">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/클루.jpeg" width="200" height="100"></th>
+                    <td>클루</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;4.2</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/7Ium0jpht0g">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal24">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/코드 777.jpeg" width="200" height="100"></th>
+                    <td>코드 777</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;4.8</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/1C5pKj3EIxc">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal6">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/셜록 13.jpeg" width="200" height="100"></th>
+                    <td>셜록 13</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;4.7</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/Kby3Ue_QTuQ">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal7">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/크라임 호텔.jpeg" width="200" height="100"></th>
+                    <td>크라임 호텔</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;3.7</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/iA5GAPshpWE">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal8">게임리뷰</button></td>
+                </tr>
+
+                <tr id="genre2">
+                    <td colspan="5">
+                        <h6>전략</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/다이아몬드 게임.jpeg" width="200" height="100"></th>
+                    <td>다이아몬드 게임</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;3.5</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/Y6rxf-d6jhM">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal9">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/루미큐브.jpeg" width="200" height="100"></th>
+                    <td>루미큐브</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;4.0</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/0u4YfLMGgxY">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal10">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/부루마블.jpeg" width="200" height="100"></th>
+                    <td>부루마블</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;4.1</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/ks1RCgOrTic">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal11">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/스플렌더.jpeg" width="200" height="100"></th>
+                    <td>스플렌더</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;4.9</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/PFmlJ3Fyre0">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal12">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/붉은 대성당.jpeg" width="200" height="100"></th>
+                    <td>붉은 대성당</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;4.6</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/tXBZS5n2K7s">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal13">게임리뷰</button></td>
+                </tr>
+
+                <tr id="genre3">
+                    <td colspan="5">
+                        <h6>협력</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/미스테리움 파크.jpeg" width="200" height="100"></th>
+                    <td>미스테리움 파크</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;2.9</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/4VJgxIrqxy0">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal14">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/키친러시.jpeg" width="200" height="100"></th>
+                    <td>키친러시</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;3.3</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/1cKYQshBlLE">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal15">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/더마인드.jpeg" width="200" height="100"></th>
+                    <td>더 마인드</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;3.1</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/yWKfxvJNBWc">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal16">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/사건의 재구성.jpeg" width="200" height="100"></th>
+                    <td>사건의 재구성</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;3.6</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/xXjEMC9UCzU">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal17">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/더 게임.jpeg" width="200" height="100"></th>
+                    <td>더 게임</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;4.8</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/-bsS2f_GvaA">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal18">게임리뷰</button></td>
+                </tr>
+
+                <tr id="genre4">
+                    <td colspan="5">
+                        <h6>스피드</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/할리갈리.jpeg" width="200" height="100"></th>
+                    <td>할리갈리</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;5.0</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/0q0yClzjADk">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal19">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/트랩워드.jpeg" width="200" height="100"></th>
+                    <td>트랩워드</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;2.9</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/h5QZ69NgRWU">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal20">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/정글스피드.jpeg" width="200" height="100"></th>
+                    <td>정글 스피드</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;3.9</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/i7aUv3fpJd0">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal21">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/블리츠.jpeg" width="200" height="100"></th>
+                    <td>블리츠</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;4.6</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/HjvaQPJpLMA">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal22">게임리뷰</button></td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="img/헥스피드.jpeg" width="200" height="100"></th>
+                    <td>헥스피드</td>
+                    <td><img src="img/star.jpeg">&nbsp;&nbsp;4.8</td>
+                    <td><button class="button">
+                            <a href="https://youtu.be/3qQVE_ErtH0">게임방법</a>
+                        </button></td>
+                    <td><button class="button" id="open_modal23">게임리뷰</button></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <div class="sidemenu shadow-lg">
+            <a href="#">Top</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="boardgame.js"></script>
+</body>
+
+</html>
